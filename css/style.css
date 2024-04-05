@@ -1,0 +1,30 @@
+* {
+	margin: 0;
+}
+main {
+	width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid red;
+    height: 100vh;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+@media only screen and (min-width:320px){
+    main{
+        height: fit-content;
+    }
+    section{
+        border: 2px solid red;
+    }
+    .image{
+        width: 100%;
+        background-size: cover;
+        height: 30vh;
+        background-image: url(/images/image-product-mobile.jpg);
+    }
+}
