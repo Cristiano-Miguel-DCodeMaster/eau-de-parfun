@@ -1,6 +1,13 @@
 * {
 	margin: 0;
 }
+:root{
+    --Darkcyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);    
+    --Verydarkblue: hsl(212, 21%, 14%);
+    --Darkgrayishblue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
 main {
 	width: 100%;
     display: flex;
@@ -8,23 +15,87 @@ main {
     align-items: center;
     border: 2px solid red;
     height: 100vh;
+    background-color: var(--Cream);
+    font-size: 14px;
+}
+main p{
+    font-size: 14px;
 }
 section{
     display: flex;
     flex-direction: column;
     width: 80%;
 }
+.price{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+button{
+    background-color: var(--Darkcyan);
+    border: none;
+    color: var(--Cream);
+}
+footer{
+    background-color: var(--Cream);
+}
 @media only screen and (min-width:320px){
-    main{
-        height: fit-content;
-    }
     section{
-        border: 2px solid red;
+        background-color: var(--White);
+        border-radius: 12px;
+        padding-bottom: 20px;
+        width: 90%;
+        justify-content: center;
+        align-items: center;
     }
     .image{
         width: 100%;
         background-size: cover;
-        height: 30vh;
+        height: 40vh;
+        border-radius: 12px 12px 0px 0px;
         background-image: url(/images/image-product-mobile.jpg);
+    }
+    section .right{
+        padding-left: 15px;
+    }
+    section .right h1{
+        font-size: 14px;
+        padding-top: 10px;
+        color: var(--Darkgrayishblue);
+    }
+    section .right h2{
+        color: var(--Verydarkblue);
+        font-size: 28px;
+        width: 95%;
+        padding-top: 10px;
+    }
+    section .right .flora{
+        color: var(--Darkgrayishblue);
+        padding-top: 10px;
+    }
+    .price{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .big{
+        color: var(--Darkcyan);
+        font-size: 30px;
+        font-weight: 700;
+    }
+    .small{
+        text-decoration: line-through;
+        font-size: 12px;
+        color: var(--Darkgrayishblue);
+    }
+    button{
+        padding: 12px;
+        border-radius: 8px;
+        width: 90%;
+        font-size: 13px;
+        font-weight: 600;
+    }
+    button img{
+        padding-right: 5px;
+        width: 12px;
     }
 }
