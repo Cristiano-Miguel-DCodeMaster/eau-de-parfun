@@ -8,6 +8,14 @@
     --Darkgrayishblue: hsl(228, 12%, 48%);
     --White: hsl(0, 0%, 100%);
 }
+@font-face {
+    font-family: isso;
+    src: url(/fonts/Fraunces[SOFT\,WONK\,opsz\,wght].ttf);
+}
+@font-face {
+    font-family: isso2;
+    src: url(/fonts/Montserrat[wght].ttf);
+}
 main {
 	width: 100%;
     display: flex;
@@ -17,6 +25,7 @@ main {
     height: 100vh;
     background-color: var(--Cream);
     font-size: 14px;
+    font-family: isso;
 }
 main p{
     font-size: 14px;
@@ -38,6 +47,7 @@ button{
 }
 footer{
     background-color: var(--Cream);
+    padding-bottom: 10px;
 }
 @media only screen and (min-width:320px){
     section{
@@ -51,7 +61,7 @@ footer{
     .image{
         width: 100%;
         background-size: cover;
-        height: 40vh;
+        height: 35vh;
         border-radius: 12px 12px 0px 0px;
         background-image: url(/images/image-product-mobile.jpg);
     }
@@ -59,23 +69,30 @@ footer{
         padding-left: 15px;
     }
     section .right h1{
-        font-size: 14px;
-        padding-top: 10px;
+        font-size: 11px;
+        padding-top: 18px;
         color: var(--Darkgrayishblue);
+        font-weight: 500;
+        text-transform: uppercase;
+        font-family:isso2;
     }
     section .right h2{
         color: var(--Verydarkblue);
-        font-size: 28px;
+        font-size: 27px;
         width: 95%;
         padding-top: 10px;
     }
     section .right .flora{
         color: var(--Darkgrayishblue);
         padding-top: 10px;
+        text-align: left;
+        width: 91%;
+        font-size: 12px;
+        font-family: isso2;
     }
     .price{
-        padding-top: 10px;
-        padding-bottom: 10px;
+        padding-top: 15px;
+        padding-bottom: 15px;
     }
     .big{
         color: var(--Darkcyan);
@@ -97,5 +114,6 @@ footer{
     button img{
         padding-right: 5px;
         width: 12px;
+        color: black;
     }
 }
