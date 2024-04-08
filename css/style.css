@@ -28,7 +28,6 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid red;
     height: 100vh;
     background-color: var(--Cream);
     font-size: 14px;
@@ -56,7 +55,30 @@ footer{
     background-color: var(--Cream);
     padding-bottom: 10px;
 }
-
+main::before{
+    content: '';
+    border-radius: 180px;
+    border: 12px solid aliceblue;
+    z-index: 1;
+    width: 140px;
+    height: 140px;
+    position: absolute;
+    border-top:6px solid rgb(0, 128, 81);
+    animation: spinner 1s ease-in-out infinite;
+}
+.that{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(0, 128, 81);
+    position: absolute;
+}
+@keyframes spinner {
+    from{
+        transform: rotate(0);
+    }to{
+        transform: rotate(360deg);
+    }
+}
 @media screen and (max-width:320px){
     section{
         background-color: var(--White);
@@ -368,15 +390,13 @@ footer{
     }
 }
 @media only screen and (min-width:992px){
-    main{
-        height: 100vh;
-    }
     section{
         padding-bottom: 0px;
         flex-direction: row;
+        height: fit-content;
     }
     .image{
-        height: 50vh;
+        height: 60vh;
         background-image: url(/images/image-product-desktop.jpg);
         border-radius: 12px 0px 0px 12px;
     }
@@ -386,24 +406,121 @@ footer{
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        height: 50vh;
+        height: fit-content;
     }
     section .right h1{
-        font-size: 20px;
-        padding-bottom: 5px;
+        font-size: 18px;
+        padding-bottom: 10px;
     }
     section .right h2{
-        font-size: 55px;
+        font-size: 45px;
         width: 85%;
+        padding-bottom: 0px;
     }
     section .right .flora{
         font-size: 19px;
         width: 95%;
-        padding-top: 30px;
+        padding-top: 20px;
     }
     .price{
         padding-bottom: 30px;
         padding-top: 30px;
+    }
+    .big{
+        font-size: 35px;
+    }
+    .small{
+        font-size: 19px;
+    }
+    button{
+        padding: 15px;
+        font-size: 18px;
+    }
+    button img{
+        width: 20px;
+    }
+}
+@media only screen and (min-width:1024px){
+    section{
+        padding-bottom: 0px;
+        flex-direction: row;
+    }
+    .image{
+        height:75vh;
+        background-image: url(/images/image-product-desktop.jpg);
+        border-radius: 12px 0px 0px 12px;
+    }
+    section .right{
+        padding-left: 40px;
+        padding-top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        height: fit-content;
+    }
+    section .right h1{
+        font-size: 18px;
+        padding-bottom: 10px;
+    }
+    section .right h2{
+        font-size: 45px;
+        width: 85%;
+        padding-bottom: 0px;
+    }
+    section .right .flora{
+        font-size: 19px;
+        width: 95%;
+        padding-top: 20px;
+    }
+    .price{
+        padding-bottom: 30px;
+        padding-top: 30px;
+    }
+    .big{
+        font-size: 35px;
+    }
+    .small{
+        font-size: 19px;
+    }
+    button{
+        padding: 15px;
+        font-size: 18px;
+    }
+    button img{
+        width: 20px;
+    }
+}
+@media only screen and (min-width:1200px){
+    main{
+        height: 90vh;
+    }
+    section{
+        height: fit-content;
+        width: 60%;
+    }
+    .image{
+        height: 60vh;
+    }
+    section .right{
+        width: 90%;
+    }
+    section .right h1{
+        font-size: 14px;
+        padding-bottom: 0px;
+    }
+    section .right h2{
+        font-size: 40px;
+        width: 80%;
+        padding-bottom: 5px;
+    }
+    section .right .flora{
+        font-size: 14px;
+        width: 80%;
+        padding-top: 0px;
+    }
+    .price{
+        padding-bottom: 10px;
+        padding-top: 20px;
     }
     .big{
         font-size: 40px;
@@ -412,10 +529,87 @@ footer{
         font-size: 19px;
     }
     button{
-        padding: 17px;
-        font-size: 23px;
+        padding: 15px;
+        font-size: 18px;
     }
     button img{
         width: 20px;
     }
+}
+@media only  screen and (min-width:1272px) and (min-height:645px){
+    section .right h2{
+        font-size: 32px;
+        width: 80%;
+      }
+      .big{
+        font-size: 35px;
+    }
+    .small{
+        font-size: 14px;
+    }
+    button{
+        padding: 13px;
+        font-size: 14px;
+    }
+}
+@media only screen and (min-width:1440px) and (min-height:800px){
+    section{
+        height: fit-content;
+        width: 50%;
+    }
+    .image{
+        height: 60vh;
+    }
+    section .right{
+        width: 90%;
+    }
+    section .right .flora{
+        font-size: 16px;
+        width: 80%;
+        padding-top: 2px;
+    }
+    .price{
+        padding-bottom: 10px;
+        padding-top: 20px;
+    }
+    .big{
+        font-size: 40px;
+    }
+    .small{
+        font-size: 19px;
+    }
+    button{
+        padding: 15px;
+        font-size: 18px;
+    }
+    button img{
+        width: 20px;
+    }
+}
+@media only screen and (min-width:1890px){
+    section .right h1{
+        font-size: 18px;
+    }
+    section .right h2{
+        font-size: 40px;
+        width: 75%;
+      }
+}
+@media only screen and (min-width:2010px){
+    section .right h1{
+        font-size: 18px;
+    }
+    section .right h2{
+        font-size: 49px;
+        width: 80%;
+      }
+}
+@media only screen and (min-width:2275px){
+    section .right h1{
+        font-size: 18px;
+    }
+    section .right h2{
+        font-size: 49px;
+        width: 75%;
+      }
 }
