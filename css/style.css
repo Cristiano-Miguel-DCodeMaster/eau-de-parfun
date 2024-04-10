@@ -1,619 +1,636 @@
 * {
 	margin: 0;
 }
-:root{
-    --Darkcyan: hsl(158, 36%, 37%);
-    --Darkcyan2: hsl(159, 31%, 28%);
-    --Cream: hsl(30, 38%, 92%);    
-    --Verydarkblue: hsl(212, 21%, 14%);
-    --Darkgrayishblue: hsl(228, 12%, 48%);
-    --White: hsl(0, 0%, 100%);
+:root {
+	--Darkcyan: hsl(158, 36%, 37%);
+	--Darkcyan2: hsl(159, 31%, 28%);
+	--Cream: hsl(30, 38%, 92%);
+	--Verydarkblue: hsl(212, 21%, 14%);
+	--Darkgrayishblue: hsl(228, 12%, 48%);
+	--White: hsl(0, 0%, 100%);
 }
-::-webkit-scrollbar{
-    display: none;
-}
-@font-face {
-    font-family: isso;
-    src: url(/fonts/Fraunces[SOFT\,WONK\,opsz\,wght].ttf);
+::-webkit-scrollbar {
+	display: none;
 }
 @font-face {
-    font-family: isso2;
-    src: url(/fonts/Montserrat[wght].ttf);
+	font-family: isso;
+	src: url(/fonts/Fraunces[SOFT\,WONK\,opsz\,wght].ttf);
 }
-body{
-    background-color: var(--Cream);
+@font-face {
+	font-family: isso2;
+	src: url(/fonts/Montserrat[wght].ttf);
+}
+body {
+	background-color: var(--Cream);
 }
 main {
 	width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: var(--Cream);
-    font-size: 14px;
-    font-family: isso;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: var(--Cream);
+	font-size: 14px;
+	font-family: isso;
 }
-main p{
-    font-size: 14px;
+main p {
+	font-size: 14px;
 }
-section{
-    display: flex;
-    flex-direction: column;
-    width: 80%;
+section {
+	display: flex;
+	flex-direction: column;
+	width: 80%;
 }
-.price{
-    display: flex;
-    gap: 20px;
-    align-items: center;
+section .right h1 {
+	opacity: 0;
+	transition: 4s;
 }
-button{
-    background-color: var(--Darkcyan);
-    border: none;
-    color: var(--Cream);
+section .right h2 {
+	opacity: 0;
+	transition: 4s;
 }
-footer{
-    background-color: var(--Cream);
-    padding-bottom: 10px;
+section .right .flora {
+	opacity: 0;
+	transition: 4s;
 }
-.that::before{
-    content: '';
-    border-radius: 50%;
-    border: 10px solid aliceblue;
-    z-index: 1;
-    width: 136px;
-    height: 140px;
-    position: absolute;
-    border-top:6px solid rgb(0, 128, 81);
-    animation: spinner 1s linear infinite;
+.price {
+	display: flex;
+	gap: 20px;
+	align-items: center;
+	opacity: 0;
+	transition: 4s;
 }
-.that{
-    width: 100%;
-    height: 100vh;
-    background-color: rgb(0, 128, 81);
-    position: fixed;
-    top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+button {
+	background-color: var(--Darkcyan);
+	border: none;
+	color: var(--Cream);
+	opacity: 0;
+	transition: 4s;
+}
+footer {
+	background-color: var(--Cream);
+	padding-bottom: 10px;
+}
+.that::before {
+	content: "";
+	border-radius: 50%;
+	border: 10px solid aliceblue;
+	z-index: 1;
+	width: 136px;
+	height: 140px;
+	position: absolute;
+	border-top: 6px solid rgb(0, 128, 81);
+	animation: spinner 1s linear infinite;
+}
+.that {
+	width: 100%;
+	height: 100vh;
+	background-color: rgb(0, 128, 81);
+	position: fixed;
+	top: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 @keyframes spinner {
-    from{
-        transform: rotate(0);
-    }to{
-        transform: rotate(360deg);
-    }
+	from {
+		transform: rotate(0);
+	}
+	to {
+		transform: rotate(360deg);
+	}
 }
-@media screen and (max-width:320px){
-    section{
-        background-color: var(--White);
-        border-radius: 12px;
-        padding-bottom: 20px;
-        width: 90%;
-        justify-content: center;
-        align-items: center;
-    }
-    .image{
-        width: 100%;
-        background-size: cover;
-        background-position: center;
-        height: 35vh;
-        border-radius: 12px 12px 0px 0px;
-        background-image: url(/images/image-product-mobile.jpg);
-    }
-    section .right{
-        padding-left: 15px;
-    }
-    section .right h1{
-        font-size: 11px;
-        padding-top: 18px;
-        color: var(--Darkgrayishblue);
-        font-weight: 500;
-        text-transform: uppercase;
-        font-family:isso2;
-    }
-    section .right h2{
-        color: var(--Verydarkblue);
-        font-size: 27px;
-        width: 95%;
-        padding-top: 10px;
-    }
-    section .right .flora{
-        color: var(--Darkgrayishblue);
-        padding-top: 10px;
-        text-align: left;
-        width: 91%;
-        font-size: 12px;
-        font-family: isso2;
-        font-weight: 460;
-    }
-    .price{
-        padding-top: 15px;
-        padding-bottom: 15px;
-    }
-    .big{
-        color: var(--Darkcyan);
-        font-size: 30px;
-        font-weight: 700;
-    }
-    .small{
-        text-decoration: line-through;
-        font-size: 12px;
-        color: var(--Darkgrayishblue);
-    }
-    button{
-        padding: 12px;
-        border-radius: 8px;
-        width: 90%;
-        font-size: 13px;
-        font-weight: 700;
-        font-family: isso2;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    button:hover{
-        cursor: pointer;
-        background-color: var(--Darkcyan2);
-    }
-    button img{
-        padding-right: 5px;
-        width: 12px;
-        color: black;
-    }
+@media screen and (max-width: 320px) {
+	section {
+		background-color: var(--White);
+		border-radius: 12px;
+		padding-bottom: 20px;
+		width: 90%;
+		justify-content: center;
+		align-items: center;
+	}
+	.image {
+		width: 100%;
+		background-size: cover;
+		background-position: center;
+		height: 35vh;
+		border-radius: 12px 12px 0px 0px;
+		background-image: url(/images/image-product-mobile.jpg);
+	}
+	section .right {
+		padding-left: 15px;
+	}
+	section .right h1 {
+		font-size: 11px;
+		padding-top: 18px;
+		color: var(--Darkgrayishblue);
+		font-weight: 500;
+		text-transform: uppercase;
+		font-family: isso2;
+	}
+	section .right h2 {
+		color: var(--Verydarkblue);
+		font-size: 27px;
+		width: 95%;
+		padding-top: 10px;
+	}
+	section .right .flora {
+		color: var(--Darkgrayishblue);
+		padding-top: 10px;
+		text-align: left;
+		width: 91%;
+		font-size: 12px;
+		font-family: isso2;
+		font-weight: 460;
+	}
+	.price {
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+	.big {
+		color: var(--Darkcyan);
+		font-size: 30px;
+		font-weight: 700;
+	}
+	.small {
+		text-decoration: line-through;
+		font-size: 12px;
+		color: var(--Darkgrayishblue);
+	}
+	button {
+		padding: 12px;
+		border-radius: 8px;
+		width: 90%;
+		font-size: 13px;
+		font-weight: 700;
+		font-family: isso2;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	button:hover {
+		cursor: pointer;
+		background-color: var(--Darkcyan2);
+	}
+	button img {
+		padding-right: 5px;
+		width: 12px;
+		color: black;
+	}
 }
-@media screen and (min-width:320px){
-    section{
-        background-color: var(--White);
-        border-radius: 12px;
-        padding-bottom: 20px;
-        width: 90%;
-        justify-content: center;
-        align-items: center;
-    }
-    .image{
-        width: 100%;
-        background-size: cover;
-        background-position: center;
-        height: 35vh;
-        border-radius: 12px 12px 0px 0px;
-        background-image: url(/images/image-product-mobile.jpg);
-    }
-    section .right{
-        padding-left: 15px;
-    }
-    section .right h1{
-        font-size: 11px;
-        padding-top: 18px;
-        color: var(--Darkgrayishblue);
-        font-weight: 500;
-        text-transform: uppercase;
-        font-family:isso2;
-    }
-    section .right h2{
-        color: var(--Verydarkblue);
-        font-size: 27px;
-        width: 95%;
-        padding-top: 10px;
-    }
-    section .right .flora{
-        color: var(--Darkgrayishblue);
-        padding-top: 10px;
-        text-align: left;
-        width: 91%;
-        font-size: 12px;
-        font-family: isso2;
-        font-weight: 460;
-    }
-    .price{
-        padding-top: 15px;
-        padding-bottom: 15px;
-    }
-    .big{
-        color: var(--Darkcyan);
-        font-size: 30px;
-        font-weight: 700;
-    }
-    .small{
-        text-decoration: line-through;
-        font-size: 12px;
-        color: var(--Darkgrayishblue);
-    }
-    button{
-        padding: 12px;
-        border-radius: 8px;
-        width: 90%;
-        font-size: 13px;
-        font-weight: 700;
-        font-family: isso2;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        aspect-ratio: 10;
-    }
-    button:hover{
-        cursor: pointer;
-        background-color: var(--Darkcyan2);
-    }
-    button img{
-        padding-right: 5px;
-        width: 12px;
-        color: black;
-    }
+@media screen and (min-width: 320px) {
+	section {
+		background-color: var(--White);
+		border-radius: 12px;
+		padding-bottom: 20px;
+		width: 90%;
+		justify-content: center;
+		align-items: center;
+	}
+	.image {
+		width: 100%;
+		background-size: cover;
+		background-position: center;
+		height: 35vh;
+		border-radius: 12px 12px 0px 0px;
+		background-image: url(/images/image-product-mobile.jpg);
+	}
+	section .right {
+		padding-left: 15px;
+	}
+	section .right h1 {
+		font-size: 11px;
+		padding-top: 18px;
+		color: var(--Darkgrayishblue);
+		font-weight: 500;
+		text-transform: uppercase;
+		font-family: isso2;
+	}
+	section .right h2 {
+		color: var(--Verydarkblue);
+		font-size: 27px;
+		width: 95%;
+		padding-top: 10px;
+	}
+	section .right .flora {
+		color: var(--Darkgrayishblue);
+		padding-top: 10px;
+		text-align: left;
+		width: 91%;
+		font-size: 12px;
+		font-family: isso2;
+		font-weight: 460;
+	}
+	.price {
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+	.big {
+		color: var(--Darkcyan);
+		font-size: 30px;
+		font-weight: 700;
+	}
+	.small {
+		text-decoration: line-through;
+		font-size: 12px;
+		color: var(--Darkgrayishblue);
+	}
+	button {
+		padding: 12px;
+		border-radius: 8px;
+		width: 90%;
+		font-size: 13px;
+		font-weight: 700;
+		font-family: isso2;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		aspect-ratio: 10;
+	}
+	button:hover {
+		cursor: pointer;
+		background-color: var(--Darkcyan2);
+	}
+	button img {
+		padding-right: 5px;
+		width: 12px;
+		color: black;
+	}
 }
-@media screen and (min-width:375px){
-    section{
-        width: 85%;
-    }
-    .image{
-        height: 40vh;
-    }
-    section .right{
-        padding-left: 20px;
-    }
-    section .right .flora{
-        width: 85%;
-        font-weight: 600;
-    }
-    .price{
-        padding-top: 15px;
-        padding-bottom: 15px;
-    }
-    .big{
-        color: var(--Darkcyan);
-        font-size: 30px;
-        font-weight: 700;
-    }
-    .small{
-        text-decoration: line-through;
-        font-size: 12px;
-        color: var(--Darkgrayishblue);
-    }
-    button{
-        padding: 12px;
-        border-radius: 8px;
-        width: 90%;
-        font-size: 13px;
-        font-weight: 700;
-        font-family: isso2;
-    }
-    button img{
-        padding-right: 5px;
-        width: 12px;
-        color: black;
-    }
+@media screen and (min-width: 375px) {
+	section {
+		width: 85%;
+	}
+	.image {
+		height: 40vh;
+	}
+	section .right {
+		padding-left: 20px;
+	}
+	section .right .flora {
+		width: 85%;
+		font-weight: 600;
+	}
+	.price {
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+	.big {
+		color: var(--Darkcyan);
+		font-size: 30px;
+		font-weight: 700;
+	}
+	.small {
+		text-decoration: line-through;
+		font-size: 12px;
+		color: var(--Darkgrayishblue);
+	}
+	button {
+		padding: 12px;
+		border-radius: 8px;
+		width: 90%;
+		font-size: 13px;
+		font-weight: 700;
+		font-family: isso2;
+	}
+	button img {
+		padding-right: 5px;
+		width: 12px;
+		color: black;
+	}
 }
-@media screen and (min-width:375px) and (min-height:667px){
-    section{
-        width: 92%;
-        padding-bottom: 40px;
-    }
-    .image{
-        height: 35vh;
-    }
-    section .right h1{
-        font-size: 14px;
-    }
-    section .right h2{
-        font-size: 32px;
-        width: 95%;
-    }
-    section .right .flora{
-        width: 90%;
-        font-size: 14px;
-        font-weight: 500;
-    }
-    .big{
-        font-size: 35px;
-    }
-    .small{
-        font-size: 13px;
-    }
-    button{
-        font-size: 18px;
-    }
-    button img{
-        width: 16px;
-    }
+@media screen and (min-width: 375px) and (min-height: 667px) {
+	section {
+		width: 92%;
+		padding-bottom: 40px;
+	}
+	.image {
+		height: 35vh;
+	}
+	section .right h1 {
+		font-size: 14px;
+	}
+	section .right h2 {
+		font-size: 32px;
+		width: 95%;
+	}
+	section .right .flora {
+		width: 90%;
+		font-size: 14px;
+		font-weight: 500;
+	}
+	.big {
+		font-size: 35px;
+	}
+	.small {
+		font-size: 13px;
+	}
+	button {
+		font-size: 18px;
+	}
+	button img {
+		width: 16px;
+	}
 }
-@media only screen and (min-width:425px){
-    main{
-        padding-top: 20px;
-    }
-    section{
-        width: 90%;
-    }
-    .image{
-        height: 40vh;
-    }
-    section .right{
-        padding-left: 18px;
-    }
-    section .right h1{
-        font-size: 14px;
-    }
-    section .right h2{
-        font-size: 35px;
-        width: 85%;
-    }
-    section .right .flora{
-        width: 82%;
-        font-size: 14px;
-        font-weight: 560;
-    }
-    button img{
-        width: 14px;
-    }
+@media only screen and (min-width: 425px) {
+	main {
+		padding-top: 20px;
+	}
+	section {
+		width: 90%;
+	}
+	.image {
+		height: 40vh;
+	}
+	section .right {
+		padding-left: 18px;
+	}
+	section .right h1 {
+		font-size: 14px;
+	}
+	section .right h2 {
+		font-size: 35px;
+		width: 85%;
+	}
+	section .right .flora {
+		width: 82%;
+		font-size: 14px;
+		font-weight: 560;
+	}
+	button img {
+		width: 14px;
+	}
 }
-@media only screen and (min-width:575px){
-    main{
-        height: fit-content;
-    }
-    .image{
-        height: 50vh;
-    }
-    section .right{
-        padding-left: 25px;
-    }
-    .small{
-        font-size: 14px;
-    }
-    button img{
-        width: 16px;
-    }
+@media only screen and (min-width: 575px) {
+	main {
+		height: fit-content;
+	}
+	.image {
+		height: 50vh;
+	}
+	section .right {
+		padding-left: 25px;
+	}
+	.small {
+		font-size: 14px;
+	}
+	button img {
+		width: 16px;
+	}
 }
-@media only screen and (min-width:768px){
-    main{
-        height: 100vh;
-    }
-    section{
-        padding-bottom: 20px;
-    }
-    .image{
-        height: 50vh;
-    }
-    section .right{
-        padding-left: 50px;
-    }
-    section .right h1{
-        font-size: 20px;
-    }
-    section .right h2{
-        font-size: 35px;
-    }
-    section .right .flora{
-        font-size: 18px;
-    }
-    .big{
-        font-size: 40px;
-    }
-    .small{
-        font-size: 19px;
-    }
-    button img{
-        width: 16px;
-    }
+@media only screen and (min-width: 768px) {
+	main {
+		height: 100vh;
+	}
+	section {
+		padding-bottom: 20px;
+	}
+	.image {
+		height: 50vh;
+	}
+	section .right {
+		padding-left: 50px;
+	}
+	section .right h1 {
+		font-size: 20px;
+	}
+	section .right h2 {
+		font-size: 35px;
+	}
+	section .right .flora {
+		font-size: 18px;
+	}
+	.big {
+		font-size: 40px;
+	}
+	.small {
+		font-size: 19px;
+	}
+	button img {
+		width: 16px;
+	}
 }
-@media only screen and (min-width:992px){
-    section{
-        padding-bottom: 0px;
-        flex-direction: row;
-        height: fit-content;
-    }
-    .image{
-        height: 60vh;
-        background-image: url(/images/image-product-desktop.jpg);
-        border-radius: 12px 0px 0px 12px;
-    }
-    section .right{
-        padding-left: 40px;
-        padding-top: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        height: fit-content;
-    }
-    section .right h1{
-        font-size: 18px;
-        padding-bottom: 10px;
-    }
-    section .right h2{
-        font-size: 45px;
-        width: 85%;
-        padding-bottom: 0px;
-    }
-    section .right .flora{
-        font-size: 19px;
-        width: 95%;
-        padding-top: 20px;
-    }
-    .price{
-        padding-bottom: 30px;
-        padding-top: 30px;
-    }
-    .big{
-        font-size: 35px;
-    }
-    .small{
-        font-size: 19px;
-    }
-    button{
-        padding: 15px;
-        font-size: 18px;
-    }
-    button img{
-        width: 20px;
-    }
+@media only screen and (min-width: 992px) {
+	section {
+		padding-bottom: 0px;
+		flex-direction: row;
+		height: fit-content;
+	}
+	.image {
+		height: 60vh;
+		background-image: url(/images/image-product-desktop.jpg);
+		border-radius: 12px 0px 0px 12px;
+	}
+	section .right {
+		padding-left: 40px;
+		padding-top: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		height: fit-content;
+	}
+	section .right h1 {
+		font-size: 18px;
+		padding-bottom: 10px;
+	}
+	section .right h2 {
+		font-size: 45px;
+		width: 85%;
+		padding-bottom: 0px;
+	}
+	section .right .flora {
+		font-size: 19px;
+		width: 95%;
+		padding-top: 20px;
+	}
+	.price {
+		padding-bottom: 30px;
+		padding-top: 30px;
+	}
+	.big {
+		font-size: 35px;
+	}
+	.small {
+		font-size: 19px;
+	}
+	button {
+		padding: 15px;
+		font-size: 18px;
+	}
+	button img {
+		width: 20px;
+	}
 }
-@media only screen and (min-width:1024px){
-    section{
-        padding-bottom: 0px;
-        flex-direction: row;
-    }
-    .image{
-        height:75vh;
-        background-image: url(/images/image-product-desktop.jpg);
-        border-radius: 12px 0px 0px 12px;
-    }
-    section .right{
-        padding-left: 40px;
-        padding-top: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        height: fit-content;
-    }
-    section .right h1{
-        font-size: 18px;
-        padding-bottom: 10px;
-    }
-    section .right h2{
-        font-size: 45px;
-        width: 85%;
-        padding-bottom: 0px;
-    }
-    section .right .flora{
-        font-size: 19px;
-        width: 95%;
-        padding-top: 20px;
-    }
-    .price{
-        padding-bottom: 30px;
-        padding-top: 30px;
-    }
-    .big{
-        font-size: 35px;
-    }
-    .small{
-        font-size: 19px;
-    }
-    button{
-        padding: 15px;
-        font-size: 18px;
-    }
-    button img{
-        width: 20px;
-    }
+@media only screen and (min-width: 1024px) {
+	section {
+		padding-bottom: 0px;
+		flex-direction: row;
+	}
+	.image {
+		height: 75vh;
+		background-image: url(/images/image-product-desktop.jpg);
+		border-radius: 12px 0px 0px 12px;
+	}
+	section .right {
+		padding-left: 40px;
+		padding-top: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		height: fit-content;
+	}
+	section .right h1 {
+		font-size: 18px;
+		padding-bottom: 10px;
+	}
+	section .right h2 {
+		font-size: 45px;
+		width: 85%;
+		padding-bottom: 0px;
+	}
+	section .right .flora {
+		font-size: 19px;
+		width: 95%;
+		padding-top: 20px;
+	}
+	.price {
+		padding-bottom: 30px;
+		padding-top: 30px;
+	}
+	.big {
+		font-size: 35px;
+	}
+	.small {
+		font-size: 19px;
+	}
+	button {
+		padding: 15px;
+		font-size: 18px;
+	}
+	button img {
+		width: 20px;
+	}
 }
-@media only screen and (min-width:1200px){
-    main{
-        height: 90vh;
-    }
-    section{
-        height: fit-content;
-        width: 60%;
-    }
-    .image{
-        height: 60vh;
-    }
-    section .right{
-        width: 90%;
-    }
-    section .right h1{
-        font-size: 14px;
-        padding-bottom: 0px;
-    }
-    section .right h2{
-        font-size: 40px;
-        width: 80%;
-        padding-bottom: 5px;
-    }
-    section .right .flora{
-        font-size: 14px;
-        width: 80%;
-        padding-top: 0px;
-    }
-    .price{
-        padding-bottom: 10px;
-        padding-top: 20px;
-    }
-    .big{
-        font-size: 40px;
-    }
-    .small{
-        font-size: 19px;
-    }
-    button{
-        padding: 15px;
-        font-size: 18px;
-    }
-    button img{
-        width: 20px;
-    }
+@media only screen and (min-width: 1200px) {
+	main {
+		height: 90vh;
+	}
+	section {
+		height: fit-content;
+		width: 60%;
+	}
+	.image {
+		height: 60vh;
+	}
+	section .right {
+		width: 90%;
+	}
+	section .right h1 {
+		font-size: 14px;
+		padding-bottom: 0px;
+	}
+	section .right h2 {
+		font-size: 40px;
+		width: 80%;
+		padding-bottom: 5px;
+	}
+	section .right .flora {
+		font-size: 14px;
+		width: 80%;
+		padding-top: 0px;
+	}
+	.price {
+		padding-bottom: 10px;
+		padding-top: 20px;
+	}
+	.big {
+		font-size: 40px;
+	}
+	.small {
+		font-size: 19px;
+	}
+	button {
+		padding: 15px;
+		font-size: 18px;
+	}
+	button img {
+		width: 20px;
+	}
 }
-@media only  screen and (min-width:1272px) and (min-height:645px){
-    section .right h2{
-        font-size: 32px;
-        width: 80%;
-      }
-      .big{
-        font-size: 35px;
-    }
-    .small{
-        font-size: 14px;
-    }
-    button{
-        padding: 13px;
-        font-size: 14px;
-    }
+@media only screen and (min-width: 1272px) and (min-height: 645px) {
+	section .right h2 {
+		font-size: 32px;
+		width: 80%;
+	}
+	.big {
+		font-size: 35px;
+	}
+	.small {
+		font-size: 14px;
+	}
+	button {
+		padding: 13px;
+		font-size: 14px;
+	}
 }
-@media only screen and (min-width:1440px) and (min-height:800px){
-    section{
-        height: fit-content;
-        width: 50%;
-    }
-    .image{
-        height: 60vh;
-    }
-    section .right{
-        width: 90%;
-    }
-    section .right .flora{
-        font-size: 16px;
-        width: 80%;
-        padding-top: 2px;
-    }
-    .price{
-        padding-bottom: 10px;
-        padding-top: 20px;
-    }
-    .big{
-        font-size: 40px;
-    }
-    .small{
-        font-size: 19px;
-    }
-    button{
-        padding: 15px;
-        font-size: 18px;
-    }
-    button img{
-        width: 20px;
-    }
+@media only screen and (min-width: 1440px) and (min-height: 800px) {
+	section {
+		height: fit-content;
+		width: 50%;
+	}
+	.image {
+		height: 60vh;
+	}
+	section .right {
+		width: 90%;
+	}
+	section .right .flora {
+		font-size: 16px;
+		width: 80%;
+		padding-top: 2px;
+	}
+	.price {
+		padding-bottom: 10px;
+		padding-top: 20px;
+	}
+	.big {
+		font-size: 40px;
+	}
+	.small {
+		font-size: 19px;
+	}
+	button {
+		padding: 15px;
+		font-size: 18px;
+	}
+	button img {
+		width: 20px;
+	}
 }
-@media only screen and (min-width:1890px){
-    section .right h1{
-        font-size: 18px;
-    }
-    section .right h2{
-        font-size: 40px;
-        width: 75%;
-      }
+@media only screen and (min-width: 1890px) {
+	section .right h1 {
+		font-size: 18px;
+	}
+	section .right h2 {
+		font-size: 40px;
+		width: 75%;
+	}
 }
-@media only screen and (min-width:2010px){
-    section .right h1{
-        font-size: 18px;
-    }
-    section .right h2{
-        font-size: 49px;
-        width: 80%;
-      }
+@media only screen and (min-width: 2010px) {
+	section .right h1 {
+		font-size: 18px;
+	}
+	section .right h2 {
+		font-size: 49px;
+		width: 80%;
+	}
 }
-@media only screen and (min-width:2275px){
-    section .right h1{
-        font-size: 18px;
-    }
-    section .right h2{
-        font-size: 49px;
-        width: 75%;
-      }
+@media only screen and (min-width: 2275px) {
+	section .right h1 {
+		font-size: 18px;
+	}
+	section .right h2 {
+		font-size: 49px;
+		width: 75%;
+	}
 }
