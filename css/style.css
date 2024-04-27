@@ -2,8 +2,8 @@
 	margin: 0;
 }
 :root {
-	--Darkcyan: hsl(158, 36%, 37%);
-	--Darkcyan2: hsl(159, 31%, 28%);
+	--Darkcyan: #3c8067;
+	--Darkcyan2: #315e4e;
 	--Cream: hsl(30, 38%, 92%);
 	--Verydarkblue: hsl(212, 21%, 14%);
 	--Darkgrayishblue: hsl(228, 12%, 48%);
@@ -13,12 +13,12 @@
 	display: none;
 }
 @font-face {
-	font-family: isso;
-	src: url(/fonts/Fraunces[SOFT\,WONK\,opsz\,wght].ttf);
+	font-family: 'isso';
+	src: url("/fonts/Fraunces[SOFT\,WONK\,opsz\,wght].ttf");
 }
 @font-face {
-	font-family: isso2;
-	src: url(/fonts/Montserrat[wght].ttf);
+	font-family: 'isso2';
+	src: url("/fonts/Montserrat[wght].ttf");
 }
 body {
 	background-color: var(--Cream);
@@ -31,7 +31,7 @@ main {
 	height: 100vh;
 	background-color: var(--Cream);
 	font-size: 14px;
-	font-family: isso;
+	font-family: 'isso',sans-serif;
 }
 main p {
 	font-size: 14px;
@@ -126,7 +126,7 @@ footer {
 		color: var(--Darkgrayishblue);
 		font-weight: 500;
 		text-transform: uppercase;
-		font-family: isso2;
+		font-family: 'isso2',sans-serif;
 	}
 	section .right h2 {
 		color: var(--Verydarkblue);
@@ -140,7 +140,7 @@ footer {
 		text-align: left;
 		width: 91%;
 		font-size: 12px;
-		font-family: isso2;
+		font-family: 'isso2',sans-serif;
 		font-weight: 460;
 	}
 	.price {
@@ -163,7 +163,7 @@ footer {
 		width: 90%;
 		font-size: 13px;
 		font-weight: 700;
-		font-family: isso2;
+		font-family: 'isso2',sans-serif;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -204,7 +204,7 @@ footer {
 		color: var(--Darkgrayishblue);
 		font-weight: 500;
 		text-transform: uppercase;
-		font-family: isso2;
+		font-family: 'isso2',sans-serif;
 	}
 	section .right h2 {
 		color: var(--Verydarkblue);
@@ -218,7 +218,7 @@ footer {
 		text-align: left;
 		width: 91%;
 		font-size: 12px;
-		font-family: isso2;
+		font-family: 'isso2',sans-serif;
 		font-weight: 460;
 	}
 	.price {
@@ -241,11 +241,10 @@ footer {
 		width: 90%;
 		font-size: 13px;
 		font-weight: 700;
-		font-family: isso2;
+		font-family: 'isso2',sans-serif;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		aspect-ratio: 10;
 	}
 	button:hover {
 		cursor: pointer;
@@ -291,7 +290,6 @@ footer {
 		width: 90%;
 		font-size: 13px;
 		font-weight: 700;
-		font-family: isso2;
 	}
 	button img {
 		padding-right: 5px;
@@ -555,6 +553,22 @@ footer {
 	}
 	button img {
 		width: 20px;
+	}
+}
+@media only screen and (min-width:1272px) and (min-height:600px){
+	section .right h2 {
+		font-size: 30px;
+		width: 75%;
+	}
+	.big {
+		font-size: 35px;
+	}
+	.small {
+		font-size: 14px;
+	}
+	button {
+		padding: 13px;
+		font-size: 14px;
 	}
 }
 @media only screen and (min-width: 1272px) and (min-height: 645px) {
