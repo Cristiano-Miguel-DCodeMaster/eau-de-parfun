@@ -73,13 +73,13 @@ footer {
 }
 .that::before {
 	content: "";
-	border-radius: 50%;
-	border: 10px solid aliceblue;
+	border-radius: 100vmax;
+	border: 8px solid rgb(4, 88, 57);
 	z-index: 1;
-	width: 136px;
+	width: 140px;
 	height: 140px;
 	position: absolute;
-	border-top: 6px solid rgb(0, 128, 81);
+	border-top: 8px solid aliceblue;
 	animation: spinner 1s linear infinite;
 }
 .that {
