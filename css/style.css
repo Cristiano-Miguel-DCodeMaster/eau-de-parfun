@@ -115,7 +115,7 @@ footer {
 		background-position: center;
 		height: 35vh;
 		border-radius: 12px 12px 0px 0px;
-		background-image: url(/images/image-product-mobile.jpg);
+		background-image: url("/images/image-product-mobile.jpg");
 	}
 	section .right {
 		padding-left: 15px;
@@ -193,7 +193,7 @@ footer {
 		background-position: center;
 		height: 35vh;
 		border-radius: 12px 12px 0px 0px;
-		background-image: url(/images/image-product-mobile.jpg);
+		background-image: url("/images/image-product-mobile.jpg");
 	}
 	section .right {
 		padding-left: 15px;
@@ -416,7 +416,7 @@ footer {
 	}
 	.image {
 		height: 60vh;
-		background-image: url(/images/image-product-desktop.jpg);
+		background-image: url("/images/image-product-desktop.jpg");
 		border-radius: 12px 0px 0px 12px;
 	}
 	section .right {
