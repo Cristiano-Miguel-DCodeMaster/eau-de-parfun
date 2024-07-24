@@ -13,11 +13,11 @@
 	display: none;
 }
 @font-face {
-	font-family: 'isso';
+	font-family: "isso";
 	src: url("/fonts/Fraunces[SOFT\,WONK\,opsz\,wght].ttf");
 }
 @font-face {
-	font-family: 'isso2';
+	font-family: "isso2";
 	src: url("/fonts/Montserrat[wght].ttf");
 }
 body {
@@ -31,7 +31,7 @@ main {
 	height: 100vh;
 	background-color: var(--Cream);
 	font-size: 14px;
-	font-family: 'isso',sans-serif;
+	font-family: "isso", sans-serif;
 }
 main p {
 	font-size: 14px;
@@ -126,7 +126,7 @@ footer {
 		color: var(--Darkgrayishblue);
 		font-weight: 500;
 		text-transform: uppercase;
-		font-family: 'isso2',sans-serif;
+		font-family: "isso2", sans-serif;
 	}
 	section .right h2 {
 		color: var(--Verydarkblue);
@@ -140,7 +140,7 @@ footer {
 		text-align: left;
 		width: 91%;
 		font-size: 12px;
-		font-family: 'isso2',sans-serif;
+		font-family: "isso2", sans-serif;
 		font-weight: 460;
 	}
 	.price {
@@ -163,7 +163,7 @@ footer {
 		width: 90%;
 		font-size: 13px;
 		font-weight: 700;
-		font-family: 'isso2',sans-serif;
+		font-family: "isso2", sans-serif;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -193,7 +193,7 @@ footer {
 		background-position: center;
 		height: 35vh;
 		border-radius: 12px 12px 0px 0px;
-		background-image: url("/images/image-product-mobile.jpg");
+		background-image: url("../images/image-product-mobile.jpg");
 	}
 	section .right {
 		padding-left: 15px;
@@ -204,7 +204,7 @@ footer {
 		color: var(--Darkgrayishblue);
 		font-weight: 500;
 		text-transform: uppercase;
-		font-family: 'isso2',sans-serif;
+		font-family: "isso2", sans-serif;
 	}
 	section .right h2 {
 		color: var(--Verydarkblue);
@@ -218,7 +218,7 @@ footer {
 		text-align: left;
 		width: 91%;
 		font-size: 12px;
-		font-family: 'isso2',sans-serif;
+		font-family: "isso2", sans-serif;
 		font-weight: 460;
 	}
 	.price {
@@ -241,7 +241,7 @@ footer {
 		width: 90%;
 		font-size: 13px;
 		font-weight: 700;
-		font-family: 'isso2',sans-serif;
+		font-family: "isso2", sans-serif;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -416,7 +416,7 @@ footer {
 	}
 	.image {
 		height: 60vh;
-		background-image: url("/images/image-product-desktop.jpg");
+		background-image: url("../images/image-product-desktop.jpg");
 		border-radius: 12px 0px 0px 12px;
 	}
 	section .right {
@@ -466,7 +466,7 @@ footer {
 	}
 	.image {
 		height: 75vh;
-		background-image: url(/images/image-product-desktop.jpg);
+		background-image: url(../images/image-product-desktop.jpg);
 		border-radius: 12px 0px 0px 12px;
 	}
 	section .right {
@@ -555,7 +555,7 @@ footer {
 		width: 20px;
 	}
 }
-@media only screen and (min-width:1272px) and (min-height:600px){
+@media only screen and (min-width: 1272px) and (min-height: 600px) {
 	section .right h2 {
 		font-size: 30px;
 		width: 75%;
